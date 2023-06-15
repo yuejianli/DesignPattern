@@ -23,6 +23,7 @@ public class AbsFactoryTest {
         AbsFactory color = FactoryProducer.getFactory("color");
         Color red = color.getColor("red");
 
+        // 装成成 红色的 圆
         circle.drawShape();
         red.fillColor();
     }

@@ -16,6 +16,6 @@ public class ThreeSheep implements Cloneable{
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        return (ThreeSheep) super.clone();
+        return super.clone();
     }
 }

@@ -59,9 +59,6 @@ public class PrototypeTest {
         sheep.setName("羊");
 
         ThreeSheep newSheep = (ThreeSheep) sheep.clone();
-
-        newSheep.setId(sheep.getId());
-        newSheep.setName(sheep.getName());
         log.info("新的 {}", newSheep);
         newSheep.setName("名称改变了:");
         log.info("改变后的名称: {}", newSheep);
@@ -108,7 +105,6 @@ public class PrototypeTest {
         log.info("克隆后的用户: {}",cloneUser);
         log.info("之前的用户: {}",user);
 
-        // 会发现 ， Dept 同时改变了， 即 Dept 并没有 Copy 成功。
         cloneUser.getDept().setName("信息部");
 
         log.info("修改后的用户: {}",cloneUser);
@@ -117,7 +113,7 @@ public class PrototypeTest {
     }
 
     @Test
-    public void sexTest() throws Exception {
+    public void sexTest() {
         NewUser2 user = new NewUser2();
         user.setId(1);
         user.setName("张三");
@@ -132,7 +128,6 @@ public class PrototypeTest {
         log.info("克隆后的用户: {}",cloneUser);
         log.info("之前的用户: {}",user);
 
-        // 会发现 ， Dept 同时改变了， 即 Dept 并没有 Copy 成功。
         cloneUser.getDept().setName("信息部");
 
         log.info("修改后的用户: {}",cloneUser);
@@ -157,7 +152,6 @@ public class PrototypeTest {
         log.info("克隆后的用户: {}",cloneUser);
         log.info("之前的用户: {}",user);
 
-        // 会发现 ， Dept 同时改变了， 即 Dept 并没有 Copy 成功。
         cloneUser.getDept().setName("信息部");
 
         log.info("修改后的用户: {}",cloneUser);

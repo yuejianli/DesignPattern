@@ -2,9 +2,7 @@ package top.yueshushu;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import top.yueshushu.one.AbsOrderPizzaFactory;
-import top.yueshushu.one.ChineseAbsOrderPizzaFactoryFactory;
-import top.yueshushu.one.Pizza;
+import top.yueshushu.one.*;
 
 /**
  * 用途描述
@@ -22,6 +20,28 @@ public class PizzaTest {
 
         Pizza pizza = absOrderPizzaFactory.createPizaa("red");
 
+        pizza.make();
+
+        pizza = absOrderPizzaFactory.createPizaa("blue");
+        pizza.make();
+
+        absOrderPizzaFactory =   new EluosiAbsOrderPizzaFactoryFactory();
+
+        pizza = absOrderPizzaFactory.createPizaa("red");
+
+        pizza.make();
+    }
+
+    @Test
+    public void twoTest() {
+
+        AbsOrderPizzaFactory absOrderPizzaFactory = new MeiAbsOrderPizzaFactoryFactory();
+
+        Pizza pizza = absOrderPizzaFactory.createPizaa("red");
+
+        pizza.make();
+
+        pizza = absOrderPizzaFactory.createPizaa("blue");
         pizza.make();
 
     }

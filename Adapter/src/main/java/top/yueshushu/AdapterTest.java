@@ -71,6 +71,11 @@ public class AdapterTest {
         });
     }
 
+    public void useListener( Listener listener) {
+        log.info(">>>>>>>>>>>>>>>>>>只 实现一个 change 方法");
+        listener.change();
+    }
+
     /**
      使用谁，则只处理谁
      */
@@ -83,11 +88,6 @@ public class AdapterTest {
                 log.info("改变事件");
             }
         });
-    }
-
-    public void useListener( Listener listener) {
-        log.info(">>>>>>>>>>>>>>>>>>只 实现一个 change 方法");
-       listener.change();
     }
 
 

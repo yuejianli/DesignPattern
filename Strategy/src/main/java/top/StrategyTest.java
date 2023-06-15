@@ -2,10 +2,7 @@ package top;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import top.yueshushu.one.AbstractDuckContext;
-import top.yueshushu.one.BadFly;
-import top.yueshushu.one.GoodFly;
-import top.yueshushu.one.TianE;
+import top.yueshushu.one.*;
 import top.yueshushu.two.AddStrategy;
 import top.yueshushu.two.CalcStrategyContext;
 import top.yueshushu.two.SubStrategy;
@@ -26,6 +23,9 @@ public class StrategyTest {
         log.info(">>>>> 这只天鹅受伤了");
         // 设置一下
         tianE.setFlyBehavior(new BadFly());
+        tianE.getFlyBehavior().fly();
+        log.info(">>>>> 这只天鹅翅膀被人打断了");
+        tianE.setFlyBehavior(new NoFly());
         tianE.getFlyBehavior().fly();
     }
 

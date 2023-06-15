@@ -3,10 +3,10 @@ package top.yueshushu;
 import cn.hutool.aop.ProxyUtil;
 import cn.hutool.aop.aspects.Aspect;
 import cn.hutool.aop.aspects.SimpleAspect;
-import cn.hutool.aop.proxy.JdkProxyFactory;
 import cn.hutool.aop.proxy.ProxyFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
+import top.yueshushu.one.ITeacher;
 import top.yueshushu.one.RealTeacher;
 import top.yueshushu.one.TeacherProxy;
 import top.yueshushu.three.RealTeacher3;
@@ -25,6 +25,12 @@ import java.lang.reflect.Method;
  */
 @Slf4j
 public class ProxyTest {
+
+    @Test
+    public void noProxyTest() {
+        ITeacher iTeacher = new RealTeacher();
+        iTeacher.talk();
+    }
 
     @Test
     public void oneTest() {
@@ -55,27 +61,29 @@ public class ProxyTest {
     public void fourTest() {
         ITeacher2 teacher2 = new RealTeacher2();
 
-
         ITeacher2 proxy = ProxyUtil.proxy(teacher2, new SimpleAspect());
 
-        proxy.hello("JDK动态代理");
+        proxy.hello("hutool 工具类的代理");
 
         ITeacher2 proxy2 = ProxyFactory.createProxy(teacher2, new Aspect() {
             @Override
             public boolean before(Object target, Method method, Object[] args) {
-                return false;
+                log.info(">>>> 代理之前执行的操作");
+                return true;
             }
 
             @Override
             public boolean after(Object target, Method method, Object[] args, Object returnVal) {
-                return false;
+                log.info(">>>> 代理之后执行的操作");
+                return true;
             }
 
             @Override
             public boolean afterException(Object target, Method method, Object[] args, Throwable e) {
-                return false;
+                log.info(">>>> 异常时执行的操作");
+                return true;
             }
         });
-        proxy2.hello("JDK 动态代理22");
+        proxy2.hello("hutool 工厂的代理");
     }
 }

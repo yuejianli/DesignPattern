@@ -11,12 +11,7 @@ import java.io.Serializable;
  * @date 2023-05-26
  */
 @Data
-public class NewDept2 implements Serializable,Cloneable{
+public class NewDept2 implements Serializable{
     private Integer id;
     private String name;
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
 }

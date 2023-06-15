@@ -45,12 +45,12 @@ public class CompositeTest {
         log.info(">>>>> 移除之前 学院打印: ");
         xueYuan1.print();
 
-//        xueYuan1.remove( zhuanYe1);
-//
-//        log.info(">>>>> 移除之后打印: ");
-//
-//        daXue.print();
-//        xueYuan1.print();
+        xueYuan1.remove( zhuanYe1);
+
+        log.info(">>>>> 移除之后打印: ");
+
+        daXue.print();
+        xueYuan1.print();
 
 
     }

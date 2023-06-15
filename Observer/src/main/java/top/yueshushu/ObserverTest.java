@@ -66,10 +66,10 @@ public class ObserverTest {
         newWeatherDataSubject.addObserver(new NewUser("用户1"));
         newWeatherDataSubject.addObserver(new NewUser("用户2"));
         newWeatherDataSubject.addObserver(new NewUser("用户3"));
-
+        log.info("温度发生改变");
         weather.setTemperature(34.f);
         newWeatherDataSubject.setWeather(weather);
-
+        log.info("温度再次发生改变");
         weather.setTemperature(30.f);
         newWeatherDataSubject.setWeather(weather);
     }

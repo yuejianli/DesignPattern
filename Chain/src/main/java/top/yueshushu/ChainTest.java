@@ -29,10 +29,11 @@ public class ChainTest {
         BuyAudit buyAudit = new BuyAudit();
         buyAudit.setId(1);
         buyAudit.setPrice(15000.0f);
-
-
+        log.info(">>> 处理 15000 的请求申请");
+        //从最低的开始进行处理请求
         zhuRen.processRequest(buyAudit);
-
-
+        buyAudit.setPrice(45000.0f);
+        log.info(">>> 处理 45000 的请求申请");
+        zhuRen.processRequest(buyAudit);
     }
 }

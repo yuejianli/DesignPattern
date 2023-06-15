@@ -6,7 +6,10 @@ import top.yueshushu.one.AbstractHouse;
 import top.yueshushu.one.HightHouse;
 import top.yueshushu.one.SimpleHouse;
 import top.yueshushu.three.Student;
-import top.yueshushu.two.*;
+import top.yueshushu.two.HightHouseBuilder;
+import top.yueshushu.two.House;
+import top.yueshushu.two.HouseDirector;
+import top.yueshushu.two.SimpleHouseBuilder;
 
 /**
  * 用途描述
@@ -33,6 +36,10 @@ public class BuildTest {
         log.info(">>> 打印高信息: {}", house);
 
         houseDirector.setHouseBuilder(new SimpleHouseBuilder());
+
+        House noRoofHouse = houseDirector.noRoofBuild();
+        log.info(">>> 打印低信息: {}", noRoofHouse);
+
         House house2 = houseDirector.build();
         log.info(">>> 打印低信息: {}", house2);
     }

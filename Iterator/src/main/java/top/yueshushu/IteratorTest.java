@@ -35,7 +35,7 @@ public class IteratorTest {
         }
 
         // 打印反转的信息.
-        log.info(">>>> 反转的信息");
+        log.info(">>>> 倒序的信息");
 
         MyIterator<Book> reverseInterator = bookShelf.getReverseInterator();
         while (reverseInterator.hasNext()) {

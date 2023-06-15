@@ -19,7 +19,6 @@ public class CalcStrategyContext {
     }
 
     // 定义原先的方法
-
     public int calc(int num1, int num2) {
         return this.calcStrategy.calc(num1,num2);
     }

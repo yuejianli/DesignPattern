@@ -22,4 +22,7 @@ public class HouseDirector {
         return this.houseBuilder.build();
     }
 
+    public House noRoofBuild () {
+        return this.houseBuilder.noRoofBuild();
+    }
 }

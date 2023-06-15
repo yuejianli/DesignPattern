@@ -17,5 +17,4 @@ public interface Aggregate<T> {
 
     public MyIterator<T> getReverseInterator();
 
-
 }

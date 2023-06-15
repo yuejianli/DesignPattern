@@ -21,4 +21,12 @@ public abstract class HouseBuilder {
         buildRoofed();
         return house;
     }
+    /**
+     一个其他的类型操作,类似于不同的套餐
+     */
+    public House noRoofBuild () {
+        buildBasic();
+        buildWalls();
+        return house;
+    }
 }

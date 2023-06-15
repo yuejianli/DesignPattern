@@ -1,7 +1,6 @@
 package top.yueshushu.two;
 
 import lombok.extern.slf4j.Slf4j;
-import top.yueshushu.one.TeacherProxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -26,7 +25,6 @@ public class TeacherProxy2 {
      获取动态代理
      */
     public Object getProxyInstance() {
-
         return Proxy.newProxyInstance(
                 target.getClass().getClassLoader(),
                 target.getClass().getInterfaces(),

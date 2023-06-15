@@ -59,6 +59,4 @@ public class MathCalculator {
     public int exec (Map<String,Integer> paramMap) {
         return this.mathExpression.interpreter(paramMap);
     }
-
-
 }

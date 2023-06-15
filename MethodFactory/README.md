@@ -8,9 +8,9 @@
 ![img.png](img.png)
 
 
-如果要增加一个中国的，只需要 增加 ChineseAbsOrderPizzaFactoryFactory  类
+如果要增加一个美国的，只需要 增加 MeiAbsOrderPizzaFactoryFactory  类
 
-和对应的 中国Pizza 实现即可
+和对应的 美国Pizza 实现即可
 
 但不支持 产品族
 
